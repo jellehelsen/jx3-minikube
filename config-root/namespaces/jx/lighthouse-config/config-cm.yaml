@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        jellehelsen/golang-http: true
         jellehelsen/jx3-minikube: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        jellehelsen/golang-http: merge
         jellehelsen/jx3-minikube: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - jellehelsen/jx3-minikube
+        - jellehelsen/golang-http
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - jellehelsen/jx3-minikube
+        - jellehelsen/golang-http
       target_url: http://lighthouse-jx.192.168.39.142.nip.io/merge/status
 kind: ConfigMap
 metadata:
